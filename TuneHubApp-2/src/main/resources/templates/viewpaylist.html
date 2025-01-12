@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>TuneHub</title>
+<link rel="stylesheet" th:href="@{/css/viewPlaylist.css}">
+</head>
+<body>
+	<section class="section">
+		<div class="songs-box">
+			<h1>Playlists</h1>
+			<br>
+			<table border="1">
+				<thead>
+					<tr class="playlists-table-heading">
+						<th>Playlist ID</th>
+						<th>Playlist NAME</th>
+						<th>Playlist SONGS</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="pl : ${plist}" class="playlists-table-body-heading">
+						<td th:text="${pl.id}"></td>
+						<td th:text="${pl.name}"></td>
+						<td>
+							<ul>
+								<li th:each="s: ${pl.song}"><span th:text="${s.songName}"></span>
+									<br> <audio controls>
+										<source th:src="${s.songLink}" type="audio/mpeg">
+									</audio></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<a href="/map-backToAdminHome" class="backbtn">
+				<button>Back</button>
+			</a>
+		</div>
+	</section>
+
+</body>
+</html>
