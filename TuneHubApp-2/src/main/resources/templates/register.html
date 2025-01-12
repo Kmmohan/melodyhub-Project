@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>TuneHub</title>
+<link rel="stylesheet" th:href="@{/css/register.css}">
+</head>
+<body>
+    <section class="section">
+      <div class="sign-up-img">
+        <img
+          src="/images/undraw_sign_up_n6im.svg"
+          alt="sign-up-svg"
+          class="sign-up-svg"
+        />
+      </div>
+      <div class="sign-up-form">
+        <div class="sign-up-box">
+         <form action="/register" method="post">
+          <h1 class="sign-up-text">sign-up</h1>
+            <label>User Name :</label>
+            <input type="text" name="username" placeholder="Enter username" />
+            <br />
+            <label>E-mail Id :</label>
+            <input type="email" name="email" placeholder="Enter Email" />
+            <br />
+            <label>Password :</label>
+            <input type="password" name="password" placeholder="Enter password" />
+            <br />
+            <label>Gender :</label>
+            Male<input type="radio" name="gender" value="male" /> Famale<input
+              type="radio"
+              name="gender"
+              value="female"
+            />
+            Other<input type="radio" name="gender" value="other" />
+            <br />
+            <label>Role :</label>
+            Admin<input type="radio" name="role" value="admin" /> Customer<input
+              type="radio"
+              name="role"
+              value="customer"
+            />
+            <br />
+            <label>Address :</label>
+            <textarea name="address" rows="5" cols="20 ">
+Enter address here.</textarea
+            >
+            <br />
+            <button>Register</button>
+          </form>
+        </div>
+      </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>TuneHub</title>
+<link rel="stylesheet" th:href="@{/css/loginFail.css}">
+</head>
+<body>
+	<section class="section">
+		<div class="login-box">
+			<h2 class="login-text">Invalid Email-Id or Password</h2>
+			<h3 class="login-text">Login again</h3>
+			<form action="/login" method="post">
+				<label>E-mail Id</label> <input type="email" name="email"
+					placeholder="Enter Email"> <br /> <label>Password</label>
+				<input type="password" name="password" placeholder="Enter password">
+				<br />
+				<button>Login</button>
+			</form>
+		</div>
+	</section>
+</body>
+</html>
+

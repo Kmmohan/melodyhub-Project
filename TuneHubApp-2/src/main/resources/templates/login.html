@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>TuneHub</title>
+<link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+     <section class="section">
+      <div class="login-img">
+        <img
+          src="/images/undraw_login_re_4vu2.svg"
+          alt="login-svg"
+          class="login-svg"
+        />
+      </div>
+      <div class="login-form">
+        <div class="login-box">
+          <form action="/login" method="post">
+            <h1 class="login-text">Login</h1>
+            <label>E-mail Id :</label>
+            <input type="email" name="email" placeholder="Enter Email" required/>
+            <br />
+            <label>Password :</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter password"
+              required
+            />
+            <br />
+            <button>Login</button>
+             <a  class="forgot-link" href="/map-forgotPassword" method="post">Forgot password</a>
+          </form>
+        </div>
+      </div>
+    </section>
+
+<!-- JavaScript to show alert only when requested -->
+    <script th:inline="javascript">
+        // Check if the button was clicked to request the alert
+        var showAlert = localStorage.getItem('showAlert');
+        if (showAlert) {
+            var condition = /*[[${condition}]]*/ false; // Retrieve the condition from Thymeleaf
+            if (condition) {
+                alert('Password reset successful!');
+            } else {
+                alert('Password reset fail or Invalid Email');
+            }
+            // Remove the flag after showing the alert
+            localStorage.removeItem('showAlert');
+        }
+    </script>
+
+
+</body>
+</html>

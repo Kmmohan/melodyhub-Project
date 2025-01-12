@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>TuneHub</title>
+<link rel="stylesheet" th:href="@{/css/customerhome.css}">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+</head>
+<body>
+	<header class="header">
+		<div class="logo">
+			<i class="fa-solid fa-guitar logo-syb" style="color: #880d1e"></i>
+			<p class="logo-tune">Tune</p>
+			<p class="logo-hub">Hub</p>
+		</div>
+	</header>
+	<section class="section">
+		<div class="img">
+			<div class="overlay">
+				<h1 class="overlay-text-welcome">Welcome to TuneHub!</h1>
+				<h1 class="overlay-text-user" th:text="${userName}"></h1>
+				<div class="overlay-text">
+					<p>TuneHub is a music application that lets you discover,
+						create, and share your favorite tunes with the world. Whether you
+						are a music lover, a musician, or a music maker, TuneHub is the
+						place for you.</p>
+				</div>
+				<div class="overlay-btn">
+					 <a href="/exploresongs" class="link"><button>Explore Songs</button></a>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

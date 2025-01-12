@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>TuneHub</title>
+<link rel="stylesheet" th:href="@{/css/adminHome.css}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <i class="fa-solid fa-guitar logo-syb" style="color: #880d1e"></i>
+      <p class="logo-tune">Tune</p>
+      <p class="logo-hub">Hub</p>
+    </div>
+    <nav class="navbar">
+      <li><a href="/map-addsongs"  >Add Songs</a></li>
+      <li><a href="/map-viwsongs" >View Songs</a></li>
+      <li> <a href="/createplaylist"  >Create Playlist</a></li>
+      <li><a href="/map-viewpaylists" >View Playlist</a></li>
+    </nav>
+  </header>
+  <section class="section">
+    <div class="img">
+      <div class="overlay">
+        <h1 class="overlay-text-welcome">Welcome Back!</h1>
+        <h1 class="overlay-text-user" th:text="${userName}"></h1>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>TuneHub</title>
+<link rel="stylesheet" th:href="@{/css/upgrade.css}">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous" />
+</head>
+<body>
+<section class="upgrade">
+      <div class="x-btn">
+        <a href="/map-upgradePlans"> <i class="fa-regular fa-circle-xmark x-syb"></i></a>
+      </div>
+      <div class="plans-text">
+        <h1 class="plan-heading">Choose the plan that's right for you</h1>
+      </div>
+      <div class="plans-periods">
+        <div class="billed-monthly">Billed Monthly</div>
+        <div class="plan-toggle-btn">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckChecked"
+              checked
+            />
+          </div>
+        </div>
+        <div class="billed-annually">
+          Billed Annually
+          <i class="fa-solid fa-arrow-trend-down" style="color: gold"></i>
+        </div>
+        <div class="save">save up to 20%</div>
+      </div>
+      <div class="plans-details-text" id="plans">
+        <div class="most-popular">MOST POPULAR</div>
+        <div class="price">
+          <i class="fa-solid fa-indian-rupee-sign rupee-syb"></i>
+          <h1>100</h1>
+          <p>/month</p>
+        </div>
+        <div class="features">
+          <form id="payment-form" class="link">
+            <button type="submit" class="buy-button plan-btn">
+              Choose Plan
+            </button>
+          </form>
+          <ul>
+            <li>Streaming Quality HD 320/256 kbps</li>
+            <li>Download Quality HD 320/256 kbps</li>
+            <li>Access to Million+ Songs</li>
+            <li>Ad Free Enjoy!</li>
+          </ul>
+        </div>
+      </div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="TuneHubApp-2/src/main/java"/>
+	<classpathentry kind="src" path="TuneHubApp-2/src/test/java"/>
+	<classpathentry kind="lib" path="TuneHubApp-2/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="output" path="TuneHubApp-2/target/classes"/>
+</classpath>

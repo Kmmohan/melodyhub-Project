@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>TuneHub</title>
+<link rel="stylesheet" th:href="@{/css/viewpaylistcustomer.css}">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <header class="header">
+      <a href="/map-customerhome" class="logo-link">
+        <div class="logo">
+          <i class="fa-solid fa-guitar logo-syb" style="color: #880d1e"></i>
+          <p class="logo-tune">Tune</p>
+          <p class="logo-hub">Hub</p>
+        </div></a
+      >
+   <nav class="navbar">
+        <li><a href="/map-premiumuser">Home</a></li>
+        <li><a href="/viewsongs">Songs</a></li>
+        <li><a href="/map-viewpaylistcustomer">Playlists</a></li>
+        <li><a href="/samplepayment">Upgrade</a></li>
+      </nav>
+    </header>
+    <section class="section">
+      <div class="img">
+        <div class="overlay">
+          <div class="playlists">
+            <h1 class="overlay-text">Playlists</h1>
+            
+            <table border="1" class="playlists-table">
+		<thead >
+			<tr class="playlists-table-heading">
+				<th>Playlist Id</th>
+				<th>Playlist Name</th>
+				<th>Playlist Songs</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="pl : ${plist}" class="playlists-table-body-heading">
+				<td th:text="${pl.id}"></td>
+				<td th:text="${pl.name}"></td>
+				<td>
+					<ul>
+						<li th:each="s: ${pl.song}"><span th:text="${s.songName}"></span>
+							<br> <audio controls>
+								<source th:src="${s.songLink}" type="audio/mpeg">
+							</audio></li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+</body>
+</html>
